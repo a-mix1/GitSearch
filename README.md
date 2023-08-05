@@ -3,4 +3,4 @@ This is a simple Github User Search Project made using React and the Github API 
 after searching up the usename(in this case mine) the result pops up
  ![aftersearch (1)](https://github.com/a-mix1/GitSearch/assets/127145709/595d6e8d-b232-437c-bb96-9ea0b0cc1d3f)
 clicking on the link 
-will show us the searched user's profile
+will show us the profile
