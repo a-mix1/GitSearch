@@ -5,6 +5,7 @@ import { Card,Image } from 'semantic-ui-react'
 
 
 function App() {
+  let fu=document.getElementById("full");
   const [name,setName]=useState('');
   const [userName,setUserName]=useState('');
   const [avatar,setAvatar]=useState('');
@@ -52,37 +53,40 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         setData(data);
+        full.style.opacity="100";
       });
   };
 
  return(
   <div>
-    <div className="navbar">
+    {/*<div className="navbar">
       <p className="name">GitSearch</p>
-    </div>
+ </div>*/}
     <div className="component">
+
     <div className="search">
-    <Form onSubmit={HandleSubmit}>
+    <p className='heading'>gitSearch</p>
+    <p className='description'>An easier way to find github profiles</p>
+    <input type="text" placeholder='Enter UserName' onChange={HandleSearch} className="searchb"></input>
+    <button className='submit' onClick={HandleSubmit}>Submit</button>
+    {/*<Form onSubmit={HandleSubmit}>
           <Form.Group>
             <Form.Input placeholder='Enter Username'name='name' onChange={HandleSearch}/>
             <Form.Button content='Submit' />
           </Form.Group>
-    </Form>
+</Form>*/}
     </div>
 
-    <div className="card">
-    <Card>
+    <div className="card" id="full">
+   
     <Image src={avatar} />
-    <Card.Content>
-      <Card.Header>{name}</Card.Header>
-      <Card.Header>{userName}</Card.Header>
-    </Card.Content>
-    <Card.Content extra>
+    
+      <p>Name: {name}</p>
     <a href={userURL} target='_blank'>
-      View Profile on Github
+      View {name}'s Profile on Github
     </a>
-   </Card.Content>
-  </Card>
+ 
+  
     </div>
     </div>
   </div>
