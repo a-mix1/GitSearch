@@ -67,7 +67,7 @@ function App() {
     <div className="search">
     <p className='heading'>gitSearch</p>
     <p className='description'>An easier way to find github profiles</p>
-    <input type="text" placeholder='Enter UserName' onChange={HandleSearch} className="searchb"></input>
+    <input type="text" placeholder='Enter Username' onChange={HandleSearch} className="searchb"></input>
     <button className='submit' onClick={HandleSubmit}>Submit</button>
     {/*<Form onSubmit={HandleSubmit}>
           <Form.Group>
